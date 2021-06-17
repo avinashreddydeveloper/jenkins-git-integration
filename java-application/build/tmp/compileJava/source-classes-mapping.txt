@@ -1,0 +1,6 @@
+com/gradle/poc/repositories/StudentRepository.java
+ com.gradle.poc.repositories.StudentRepository
+com/gradle/poc/model/Student.java
+ com.gradle.poc.model.Student
+com/gradle/poc/SpringBootExampleApplication.java
+ com.gradle.poc.SpringBootExampleApplication

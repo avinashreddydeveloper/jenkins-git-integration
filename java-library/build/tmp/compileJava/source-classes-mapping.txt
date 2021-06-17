@@ -1,0 +1,2 @@
+com/gradle/poc/ProjectAPrimary.java
+ com.gradle.poc.ProjectAPrimary
