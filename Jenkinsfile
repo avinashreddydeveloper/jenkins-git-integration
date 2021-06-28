@@ -1,6 +1,8 @@
 node {
     stage('Build') {
-        sh './gradlew clean build'
+        withGradle {
+    sh './gradlew build'
+  }
     }
 
     stage('Deploy') {
