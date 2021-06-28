@@ -1,11 +1,15 @@
 node {
-    stage('Build') {
-        withGradle {
-    sh './gradlew build'
-  }
+    stage('checkout code') {
+        checkout scm
     }
 
-    stage('Deploy') {
-        echo 'Deploying....'
+    stage('Build jar') {
+        withGradle {
+            sh './gradlew build'
+        }
+    }
+
+    stage('Build docker image') {
+        sh 'docker build -t avinashch1988/javaapplication .'
     }
 }

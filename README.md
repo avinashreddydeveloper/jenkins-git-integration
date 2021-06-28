@@ -1,2 +1,2 @@
 # jenkinsgitintegration
-updated with jenkins git integration
+Updated with jenkins git integration
