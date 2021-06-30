@@ -4,12 +4,13 @@ node {
     }
 
     stage('Build jar') {
-        withGradle {
+        //withGradle {
             sh './gradlew build'
-        }
+        //}
     }
 
     stage('Build docker image') {
+        
         sh 'docker build -t avinashch1988/javaapplication .'
     }
 }
