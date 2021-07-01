@@ -1,4 +1,5 @@
 node {
+    def app
     stage('checkout code') {
         checkout scm
     }
