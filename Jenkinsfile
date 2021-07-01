@@ -4,13 +4,23 @@ node {
     }
 
     stage('Build jar') {
-        //withGradle {
-            sh './gradlew build'
-        //}
+        sh './gradlew build'
     }
 
-    stage('Build docker image') {
-        
-        sh 'docker build -t avinashch1988/javaapplication .'
+    stage('Build image') {
+        app = docker.build("avinashch1988/javaapplication")
+    }
+
+    stage('Test image') {
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
+    }
+
+    stage('Push image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_credentials') {
+            app.push("${env.BUILD_NUMBER}")
+            app.push("latest")
+        }
     }
 }
