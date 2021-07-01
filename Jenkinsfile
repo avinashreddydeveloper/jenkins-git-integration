@@ -8,7 +8,7 @@ node {
         sh './gradlew buil'
     }
 
-    stage('Build image') {
+    stage('Build image2and') {
         app = docker.build("avinashch1988/javaapplication")
     }
 
