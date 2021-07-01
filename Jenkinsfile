@@ -5,7 +5,7 @@ node {
     }
 
     stage('Build jar') {
-        sh './gradlew build'
+        sh './gradlew buil'
     }
 
     stage('Build image') {
